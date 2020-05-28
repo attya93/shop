@@ -17,7 +17,7 @@ const SliderImage = (props) => {
         (offsetX === 0 ? setOffsetX(-100 * (newProd.length - 1)) : setOffsetX(offsetX + 100));
     }
     let viewes;
-    if (!product || undefined) {
+    if (!product) {
         viewes = <div> No Product Found</div>
     } else {
         viewes = (

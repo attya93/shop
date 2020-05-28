@@ -31,19 +31,20 @@ const getListNamelength = (state) => {
 const Reducer = (state = initalState, action) => {
     switch (action.type) {
         case actionType.NewProductList:
-            const ob = getIsNew(state)
-            console.log(ob);
             return {
                 ...state,
-                isNewList: ob
+                isNewList: getIsNew(state)
             }
+            break;
         case actionType.CategoryName:
             return {
                 ...state,
                 categoryName: getListNamelength(state)
             }
+            break;
         default:
             return state;
+            break;
     }
 }
 

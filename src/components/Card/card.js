@@ -16,14 +16,15 @@ const card = (props) => {
                     <h2 className="cardp__content-price">{props.price} EGP</h2>
                     <p className="cardp__content-desc">{props.isAvailble ? "In stock" : "out of stock"}</p>
                 </div>
-                {showControls &&
-                    <div className="cardp__control">
-                        <button className="btn btn__small">Edit</button>
-                        <button className="btn btn__small">to Cart</button>
-                        <button className="btn btn__small">Delete</button>
-                    </div>
-                }
             </Link>
+            {showControls &&
+                <div className="cardp__control">
+                    <button className="btn btn__small">Edit</button>
+                    <button className="btn btn__small">to Cart</button>
+                    <button className="btn btn__small">Delete</button>
+                </div>
+            }
+
         </article >
     )
 }

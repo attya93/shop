@@ -7,6 +7,7 @@ const Categoire = (props) => {
     const [counter, setCounter] = useState(0);
     let obj = controls.find(ob => ob.name === listName)
 
+    console.log(controls)
     const slideNextListOfProduct = () => {
         if (counter > obj[listName] - 1) {
             setCounter(obj[listName])
