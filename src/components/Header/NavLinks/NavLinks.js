@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 
 import './NavLinks.scss';
 const NavLinks = (props) => {
@@ -9,7 +9,7 @@ const NavLinks = (props) => {
                 <NavLink to="/" exact>Shop</NavLink>
             </li>
             <li>
-                <NavLink to="/prod/Categ">Categire</NavLink>
+                <NavLink to={`/product/`}>Categire</NavLink>
             </li>
             <li>
                 <NavLink to="/auth">Auth</NavLink>

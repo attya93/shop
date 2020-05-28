@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
-
+import { Link } from 'react-router-dom'
 import Card from '../Card/card';
 import './Categoitr.scss';
 const Categoire = (props) => {
-    const { list, controls } = props;
+    const { list, controls, listName } = props;
     const [counter, setCounter] = useState(0);
+    let obj = controls.find(ob => ob.name === listName)
 
     const slideNextListOfProduct = () => {
-        if (counter > (controls[0].realme - 3)) {
-            setCounter((controls[0].realme - 2))
+        if (counter > obj[listName] - 1) {
+            setCounter(obj[listName])
         } else {
             const newIndex = counter + 1
             setCounter(newIndex)
@@ -23,14 +24,15 @@ const Categoire = (props) => {
     }
     return (
         <div className="card__slider">
-            <h1>{props.listName}</h1>
+            <h1><Link to={`/product/${listName}`}>{listName}</Link></h1>
             <div className="card__slider-warp" style={{
-                transform: `translateX(-${counter * (100 / controls[0].realme)}%)`
+                transform: `translateX(-${counter * (100 / (obj[listName] - 1))}%)`
             }}>
                 {list.map(prod => {
                     return <Card
                         key={prod._id}
                         id={prod._id}
+                        catgName={listName}
                         prodName={prod.ProdName}
                         img={prod.img}
                         price={prod.price}
@@ -41,9 +43,9 @@ const Categoire = (props) => {
             <div className="card__slider-controls">
                 <button className="left" onClick={slidePrevListOfProduct} disabled={counter === 0}>left</button>
                 <br />
-                <button className="right" onClick={slideNextListOfProduct} disabled={counter >= (controls[0].realme - 2)}>right</button>
+                <button className="right" onClick={slideNextListOfProduct} disabled={counter >= (obj[listName] - 2)}>right</button>
             </div>
-        </div>
+        </div >
 
     )
 }

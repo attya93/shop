@@ -10,7 +10,7 @@ const Shop = (props) => {
     const sliderImage = [];
     Object.keys(shopInger).map(item => {
         const prop = shopInger[item];
-        sliderImage.push({ [item]: prop.length })
+        sliderImage.push({ [item]: prop.length, name: item })
         prop.forEach(element => {
             if (element.isNew) {
                 items.push(element)
@@ -18,7 +18,6 @@ const Shop = (props) => {
             }
         });
     });
-
     return (
         <>
             <main>
