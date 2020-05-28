@@ -8,7 +8,6 @@
     margin: 1rem;
     margin-top: 2rem;
     width: 20vw;
-    height: 46vh;
     overflow: hidden;
     border-radius: 2rem;
     box-shadow: 0 2rem 4rem rgba(#000, 0.2);
@@ -65,6 +64,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 1rem;
     }
 }
 

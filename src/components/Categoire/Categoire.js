@@ -37,6 +37,7 @@ const Categoire = (props) => {
                         img={prod.img}
                         price={prod.price}
                         isAvailble={prod.isAvailble}
+                        showControls={true}
                     />
                 })}
             </div>
