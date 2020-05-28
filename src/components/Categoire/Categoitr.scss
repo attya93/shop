@@ -1,0 +1,25 @@
+.card__slider {
+    margin-top: 2rem;
+    position: relative;
+    height: 55vh;
+    overflow: hidden;
+
+    &-warp {
+        display: flex;
+        position: absolute;
+        justify-content: space-evenly;
+    }
+
+}
+
+.left {
+    position: absolute;
+    top: 50%;
+    left: 0.2rem;
+}
+
+.right {
+    position: absolute;
+    top: 50%;
+    right: 0.2rem;
+}

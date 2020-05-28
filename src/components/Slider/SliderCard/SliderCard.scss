@@ -1,0 +1,164 @@
+.card {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    color: #fff;
+    background-color: #9a1f40;
+
+
+    &__img {
+        flex: 0 0 49%;
+
+        background-size: contain;
+        display: flex;
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    }
+
+    &__info {
+        flex: 1;
+        background-color: #9a1f40;
+
+        &-title {
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 10rem;
+            font-weight: 500;
+            text-shadow: 0 0.7rem 0 rgba(#000, 0.4);
+            margin: 0.5rem;
+            letter-spacing: 0.2rem;
+        }
+
+        &-desc {
+            margin-top: 2rem;
+            margin-right: 6rem;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 400;
+        }
+
+        &-details {
+            display: block;
+            margin: auto;
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+        &-order {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 8rem;
+        }
+
+    }
+
+}
+
+.price {
+    display: inline-block;
+    font-size: 4rem;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+
+}
+
+@media (max-width:1200px) {
+    .card {
+        &__info {
+            &-title {
+                margin-top: 2rem;
+                font-size: 3rem;
+            }
+
+            &-desc {
+                padding: 0 1rem;
+                margin-top: 4rem;
+                margin-right: 2rem;
+                box-sizing: border-box;
+                font-size: 1.8rem;
+            }
+
+
+            &-order {
+                flex-direction: column;
+                margin-top: 4rem;
+            }
+        }
+    }
+
+    .price {
+        font-size: 4rem;
+        margin: auto;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width:590px) {
+    .card {
+        &__info {
+            &-title {
+                margin-top: 2rem;
+                font-size: 3rem;
+            }
+
+            &-desc {
+                padding: 0 1rem;
+                margin-top: 3rem;
+                margin-right: 2rem;
+                font-size: 1.8rem;
+            }
+
+            &-order {
+                flex-direction: column;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .price {
+        font-size: 2rem;
+        margin: auto;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width:350px) {
+    .card {
+        &__info {
+            &-title {
+                margin-top: 2rem;
+                font-size: 3rem;
+            }
+
+            &-desc {
+                padding: 0 1rem;
+                margin-top: 2rem;
+                margin-right: 2rem;
+                font-size: 1.5rem;
+            }
+
+            &-details {
+                margin-top: 0.5rem;
+                font-size: 1.1rem;
+            }
+
+            &-order {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .price {
+        font-size: 1.9rem;
+        margin: auto;
+        margin-bottom: 0.5rem;
+    }
+}

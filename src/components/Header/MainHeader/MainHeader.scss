@@ -1,0 +1,20 @@
+.main-header {
+    width: 100%;
+    height: 3rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background: #efb960;
+    box-shadow: 0 2rem 4rem rgba($color: #fcf876, $alpha: 0.25);
+
+}
+
+@media (min-width: 768px) {
+    .main-header {
+        justify-content: space-between;
+    }
+}

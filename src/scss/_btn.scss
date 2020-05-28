@@ -1,0 +1,99 @@
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: capitalize;
+        text-decoration: none;
+        font-weight: bolder;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 2.5rem;
+        position: relative;
+        transition: all 0.2s;
+        font-size: 2rem;
+        outline: none;
+        background-color: coral;
+        color: #fff;
+        border: none;
+        width: 50%;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 2rem 4rem rgba(#000, 0.2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active,
+    &:checked {
+        outline: none;
+        transform: translateY(0.2rem);
+        box-shadow: 0 2rem 4rem rgba(#000, 0.2);
+    }
+
+    &__small {
+        font-size: 1.8rem;
+        font-weight: bolder;
+        padding: 1rem 1rem;
+        text-align: center;
+        margin: 1rem 1rem;
+    }
+
+
+}
+
+@media (max-width:990px) {
+    .btn {
+
+        &__small {
+            margin: 1rem 1rem;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media (max-width:690px) {
+    .btn {
+
+        &,
+        &:link,
+        &:visited {
+            font-size: 1.8rem;
+            padding: 1.5rem 1.9rem;
+            margin: auto;
+        }
+    }
+
+    &__small {
+        margin: 1rem 1rem;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:490px) {
+    .btn {
+
+        &,
+        &:link,
+        &:visited {
+            font-size: 1.2rem;
+            padding: 1rem 1rem;
+            margin: auto;
+        }
+
+        &__small {
+            border-radius: 50%;
+            margin: 1rem 0.1rem;
+
+            font-size: 1.2rem;
+        }
+    }
+}

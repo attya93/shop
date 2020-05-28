@@ -1,0 +1,45 @@
+.main-nav__menu-btn {
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-right: 0.35rem;
+
+    & span {
+        width: 2rem;
+        height: 2px;
+        display: block;
+        background: #fff;
+    }
+}
+
+.main-nav__title {
+    color: #fff;
+    font-size: 2rem;
+
+    & a {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.main-nav__header-nav {
+    display: none;
+}
+
+.main-nav__drawer-nav {
+    height: 100%;
+}
+
+@media(min-width:768px) {
+    .main-nav__menu-btn {
+        display: none;
+    }
+
+    .main-nav__header-nav {
+        display: block;
+    }
+}

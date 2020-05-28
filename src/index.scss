@@ -1,0 +1,15 @@
+@import"./scss/bases";
+@import"./scss/colors";
+@import"./scss/mixin";
+@import"./scss/types";
+@import"./scss/btn";
+
+@import './components/BackDrop//BackDrop.scss';
+@import './components//Header/MainHeader/MainHeader.scss';
+@import './components//Header/MainNavigation/Main.navigation.scss';
+@import "./components/Header/NavLinks/NavLinks.scss";
+@import "./components/SideDrawer/SideDrawer.scss";
+@import"./components/Slider/SliderCard/SliderCard.scss";
+@import"./components/Slider/SliderImage.scss";
+@import"./components/Categoire/Categoitr.scss";
+@import"./components/Card/Card.scss";
