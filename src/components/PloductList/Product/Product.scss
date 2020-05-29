@@ -1,0 +1,51 @@
+.cat-card {
+    display: grid;
+    margin: 0 2rem;
+    margin-top: 1rem;
+    grid-template-columns: 10rem;
+    grid-template-rows: 15rem 1rem;
+    grid-template-areas: "image""text";
+    border-radius: 18rem;
+    box-shadow: 0 1rem 2rem rgba(#000, .20);
+    text-align: center;
+    background-color: #c7a7e7;
+    color: black;
+
+    &__img {
+        grid-area: "image";
+
+        & img {
+            width: 100%;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+        }
+    }
+
+    &__info {
+        grid-area: "text";
+        margin-top: -2rem;
+        text-transform: capitalize;
+        font-size: 1.5rem;
+    }
+}
+
+.product-list-view {
+    color: black;
+    background-color: blueviolet;
+    border-radius: 1rem;
+
+    &__control {
+        font-size: 1.9rem;
+        margin: 1rem 0;
+        padding: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+        border-bottom: 2px solid black;
+    }
+
+    &__prod {
+        margin: 0 2rem;
+        padding: 1rem;
+        font-size: 1.9rem;
+    }
+}

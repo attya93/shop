@@ -9,7 +9,7 @@ const NavLinks = (props) => {
                 <NavLink to="/" exact>Shop</NavLink>
             </li>
             <li>
-                <NavLink to={`/product/`}>Categire</NavLink>
+                <NavLink to={`/product`}>Categire</NavLink>
             </li>
             <li>
                 <NavLink to="/auth">Auth</NavLink>

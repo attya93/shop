@@ -8,11 +8,13 @@ import SliderImage from '../components/Slider/SliderImage';
 import Categoire from '../components/Categoire/Categoire';
 
 const Shop = (props) => {
-    useEffect(() => {
-        props.onNewList();
-        props.onNameAndLenth();
 
-    }, [])
+    const { onNewList, onNameAndLenth } = props;
+    useEffect(() => {
+        onNewList();
+        onNameAndLenth();
+
+    }, [onNewList, onNameAndLenth])
     return (
         <>
             <main>

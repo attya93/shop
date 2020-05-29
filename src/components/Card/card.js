@@ -4,7 +4,7 @@ import './Card.scss';
 const card = (props) => {
     const { showControls } = props
     return (
-        <article className="cardp" style={{ height: { showControls } ? "40vh" : "45vh" }} >
+        <article className={`cardp${props.shap === "react" ? "-react" : ""}`} style={{ height: { showControls } ? "40vh" : "45vh" }} >
             <Link to={`/${props.catgName}/${props.id}`}>
                 <header className="cardp__header">
                     <h1 className="cardp__header-title">{props.prodName}</h1>
