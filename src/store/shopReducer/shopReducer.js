@@ -8,7 +8,7 @@ const initalState = {
 
 const getIsNew = (state) => {
     const items = [];
-    const arr = Object.keys(state.shopProduct).map(item => {
+    Object.keys(state.shopProduct).map(item => {
         const ob = state.shopProduct[item];
         ob.forEach(element => {
             if (element.isNew) {
@@ -20,7 +20,7 @@ const getIsNew = (state) => {
 }
 const getListNamelength = (state) => {
     const sliderImage = [];
-    const arr = Object.keys(state.shopProduct).map(item => {
+    Object.keys(state.shopProduct).map(item => {
         const prop = state.shopProduct[item];
         sliderImage.push({ [item]: prop.length, name: item })
     });
@@ -35,16 +35,13 @@ const Reducer = (state = initalState, action) => {
                 ...state,
                 isNewList: getIsNew(state)
             }
-            break;
         case actionType.CategoryName:
             return {
                 ...state,
                 categoryName: getListNamelength(state)
             }
-            break;
         default:
             return state;
-            break;
     }
 }
 

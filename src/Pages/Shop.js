@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 import { connect } from 'react-redux';
 import * as actionType from '../store/shopAction/shopAction';
@@ -6,37 +6,21 @@ import * as actionType from '../store/shopAction/shopAction';
 
 import SliderImage from '../components/Slider/SliderImage';
 import Categoire from '../components/Categoire/Categoire';
-import store from '../data';
-
 
 const Shop = (props) => {
-
-    // const [shopInger] = useState(store.product.categoris);
-    // const items = [];
-    // const sliderImage = [];
-    // Object.keys(shopInger).map(item => {
-    //     const prop = shopInger[item];
-    //     sliderImage.push({ [item]: prop.length, name: item })
-    //     prop.forEach(element => {
-    //         if (element.isNew) {
-    //             items.push(element)
-    //             return element
-    //         }
-    //     });
-    // });
     useEffect(() => {
         props.onNewList();
+        props.onNameAndLenth();
 
     }, [])
-    console.log(props.prod)
     return (
         <>
             <main>
                 <SliderImage product={props.prod.isNewList} />
             </main>
-            {/* {Object.keys(shopInger).map((list, index) => {
-                return <Categoire key={index} listName={list} list={shopInger[list]} controls={sliderImage} />
-            })} */}
+            {Object.keys(props.prod.shopProduct).map((list, index) => {
+                return <Categoire key={index} listName={list} list={props.prod.shopProduct[list]} controls={props.prod.categoryName} />
+            })}
         </>
     )
 }
