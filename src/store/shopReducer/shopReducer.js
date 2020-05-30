@@ -3,7 +3,8 @@ import data from '../../data';
 const initalState = {
     shopProduct: data.product.categoris,
     categoryName: [],
-    isNewList: []
+    isNewList: [],
+    singleProd: null
 }
 
 const getIsNew = (state) => {
@@ -27,6 +28,21 @@ const getListNamelength = (state) => {
     return sliderImage;
 }
 
+const getSingleProduct = (state, action) => {
+    const prod = [];
+    Object.keys(state.shopProduct).map((item) => {
+        if (item === action.payload.catName) {
+            const ob = state.shopProduct[item];
+            ob.forEach(el => {
+                if (el._id === action.payload.id) {
+                    prod.push(el);
+                }
+            })
+        }
+    })
+    return prod;
+}
+
 
 const Reducer = (state = initalState, action) => {
     switch (action.type) {
@@ -39,6 +55,12 @@ const Reducer = (state = initalState, action) => {
             return {
                 ...state,
                 categoryName: getListNamelength(state)
+            }
+        case actionType.ShowSingleProd:
+            return {
+                ...state,
+                singleProd: getSingleProduct(state, action)
+
             }
         default:
             return state;

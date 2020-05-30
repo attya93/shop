@@ -1,13 +1,3 @@
-@keyframes lds-ring {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 @mixin styleText {
     background-image: linear-gradient(to right, #d45b0a, #530c0c);
     background-clip: text;

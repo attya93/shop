@@ -51,7 +51,7 @@ const ProductList = (props) => {
                         <button className="btn__small" onClick={toggleShowControls}>Control</button>
                     </div>
                 </div>
-                {!NameOfList ? <p>No Prand Selected</p>
+                {!NameOfList ? <p className="woranging">No Prand Selected</p>
                     :
                     <div className="product-list-view__prod" style={{ display: `${styleOfList === "react" ? "block" : "flex"}` }}>
                         {/* {
