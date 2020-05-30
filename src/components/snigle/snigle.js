@@ -2,34 +2,33 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import './sngile.scss';
 const snigle = (props) => {
-    const { showControls } = props
-
+    const { showControls, shap } = props
 
     return (
         <div>
 
-            <div className="cdProd">
-                <Link to={`/${props.catgName}/${props.id}`}>
-                    <div className="cdProd__title">
+            <div className={shap ? "reactx" : "cdProd"}>
+                <Link to={`/${props.catgName}/${props.id}`} className={shap ? "react" : null}>
+                    <div className={`${shap ? "react" : "cdProd"}__title`}>
                         <h2>{props.prodName}</h2>
                     </div>
-                    <div className="cdProd__img">
+                    <div className={`${shap ? "react" : "cdProd"}__img`}>
                         <img src={props.img} alt={props.id} />
                     </div>
-                    <div className="cdProd__details">
-                        <h4 className="cdProd__details-price">{props.price} EGP</h4>
-                        <p className="cdProd__details-status">status:{props.isAvailble ? "In stock" : "out of stock"}</p>
+                    <div className={`${shap ? "react" : "cdProd"}__details`}>
+                        <h4 className={`${shap ? "react" : "cdProd"}price`}>{props.price} EGP</h4>
+                        <p className={`${shap ? "react" : "cdProd"}__details-status`}>status:{props.isAvailble === "true" ? "In stock" : "out of stock"}</p>
                     </div>
                 </Link>
-                {!showControls &&
-                    <div className="cdProd__controls">
-                        <button className="btn__small">add</button>
-                        <button className="btn__small">edit</button>
-                        <button className="btn__small">delete</button>
-                    </div>
+                {showControls ? <div className={`${shap ? "reactx" : "cdProd"}__controls`}>
+                    <button className="btn__small">add</button>
+                    <button className="btn__small">edit</button>
+                    <button className="btn__small">delete</button>
+                </div>
+                    : null
                 }
             </div>
-        </div>
+        </div >
     )
 }
 

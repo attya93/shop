@@ -9,6 +9,11 @@ const ProductList = (props) => {
     const { onNewList, onNameAndLenth } = props
     const [NameOfList, setNameOfList] = useState();
     const [styleOfList, setStyleOfList] = useState();
+    const [showControls, setShowControls] = useState(false);
+
+    const toggleShowControls = () => {
+        setShowControls(!showControls)
+    }
     useEffect(() => {
         onNewList();
         onNameAndLenth();
@@ -41,22 +46,44 @@ const ProductList = (props) => {
                         search component
                     </div>
                     <div className="contorls__display">
-                        <button className="btn" onClick={() => styleProductList("react")}>List</button>
-                        <button className="btn" onClick={() => styleProductList()}>Grid</button>
+                        <button className="btn__small" onClick={() => styleProductList("react")}>List</button>
+                        <button className="btn__small" onClick={() => styleProductList()}>Grid</button>
+                        <button className="btn__small" onClick={toggleShowControls}>Control</button>
                     </div>
                 </div>
                 {!NameOfList ? <p>No Prand Selected</p>
                     :
-                    <div className="product-list-view__prod">
+                    <div className="product-list-view__prod" style={{ display: `${styleOfList === "react" ? "block" : "flex"}` }}>
                         {/* {
                             console.log(props.prod.shopProduct[NameOfList])
                         } */}
-                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
-                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
-                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
-                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
-                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
-                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
+                        <Snigle catgName="realme"
+                            id="1"
+                            img="http://placehold.it/250"
+                            prodName="3 pro"
+                            price="3000"
+                            isAvailble="true"
+                            showControls={showControls}
+                            shap={styleOfList}
+                        />
+                        <Snigle catgName="realme"
+                            id="1"
+                            img="http://placehold.it/250"
+                            prodName="3 pro"
+                            price="3000"
+                            isAvailble="true"
+                            showControls={showControls}
+                            shap={styleOfList}
+                        />
+                        <Snigle catgName="realme"
+                            id="1"
+                            img="http://placehold.it/250"
+                            prodName="3 pro"
+                            price="3000"
+                            isAvailble="true"
+                            showControls={showControls}
+                            shap={styleOfList}
+                        />
                     </div>
                 }
             </div>
