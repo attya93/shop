@@ -1,21 +1,26 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux';
 import * as actionType from '../../store/shopAction/shopAction';
 
 import Product from './Product/Product';
-import Card from '../Card/card';
+import Snigle from '../snigle/snigle';
 import './ProductList.scss';
 const ProductList = (props) => {
     const { onNewList, onNameAndLenth } = props
+    const [NameOfList, setNameOfList] = useState();
+    const [styleOfList, setStyleOfList] = useState();
     useEffect(() => {
         onNewList();
         onNameAndLenth();
     }, [onNameAndLenth, onNewList])
 
     const showListOfProduct = (id) => {
-        console.log("clicked", id)
+        setNameOfList();
+        setNameOfList(id)
     }
-
+    const styleProductList = (shap) => {
+        setStyleOfList(shap)
+    }
     return (
         <>
             <div className="category__list">
@@ -36,22 +41,24 @@ const ProductList = (props) => {
                         search component
                     </div>
                     <div className="contorls__display">
-                        square
-                        reactangular
+                        <button className="btn" onClick={() => styleProductList("react")}>List</button>
+                        <button className="btn" onClick={() => styleProductList()}>Grid</button>
                     </div>
                 </div>
-                <div className="product-list-view__prod">
-                    <Card
-                        shap="react"
-                        prodName="X max"
-                        catgName="Apple"
-                        img="http://placehold.it/200"
-                        id="1"
-                        price="20000"
-                        isAvailble="true"
-                        showControls="true"
-                    />
-                </div>
+                {!NameOfList ? <p>No Prand Selected</p>
+                    :
+                    <div className="product-list-view__prod">
+                        {/* {
+                            console.log(props.prod.shopProduct[NameOfList])
+                        } */}
+                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
+                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
+                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
+                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
+                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
+                        <Snigle catgName="realme" id="1" img="http://placehold.it/250" prodName="3 pro" price="3000" isAvailble="true" showControls="false" />
+                    </div>
+                }
             </div>
         </>
 

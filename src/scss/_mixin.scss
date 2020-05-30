@@ -7,3 +7,9 @@
         transform: rotate(360deg);
     }
 }
+
+@mixin styleText {
+    background-image: linear-gradient(to right, #d45b0a, #530c0c);
+    background-clip: text;
+    color: transparent;
+}

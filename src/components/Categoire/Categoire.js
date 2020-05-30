@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 
-import Card from '../Card/card';
+import Snigle from '../snigle/snigle'
 import Loading from '../Loading/Loading';
 import './Categoitr.scss';
 
@@ -38,7 +38,7 @@ const Categoire = (props) => {
     }
     else {
         view = (list.map(prod => {
-            return <Card
+            return <Snigle
                 key={prod._id}
                 id={prod._id}
                 catgName={listName}
@@ -46,7 +46,7 @@ const Categoire = (props) => {
                 img={prod.img}
                 price={prod.price}
                 isAvailble={prod.isAvailble}
-                showControls={true}
+                showControls={false}
             />
         })
         );

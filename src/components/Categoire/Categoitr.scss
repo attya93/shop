@@ -1,10 +1,10 @@
 .card__slider {
-    margin-top: 2rem;
+    margin: 2rem;
     position: relative;
-    height: 55vh;
-    overflow: hidden;
+    height: 60vh;
 
     &-warp {
+        min-width: 100%;
         display: flex;
         position: absolute;
         justify-content: space-evenly;

@@ -31,7 +31,6 @@
 
 .product-list-view {
     color: black;
-    background-color: blueviolet;
     border-radius: 1rem;
 
     &__control {
@@ -47,5 +46,7 @@
         margin: 0 2rem;
         padding: 1rem;
         font-size: 1.9rem;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
