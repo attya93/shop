@@ -10,6 +10,7 @@ const ProductList = (props) => {
     const [NameOfList, setNameOfList] = useState();
     const [styleOfList, setStyleOfList] = useState();
     const [showControls, setShowControls] = useState(false);
+    const prod = props.prod;
 
     const toggleShowControls = () => {
         setShowControls(!showControls)
@@ -26,6 +27,8 @@ const ProductList = (props) => {
     const styleProductList = (shap) => {
         setStyleOfList(shap)
     }
+
+
     return (
         <>
             <div className="category__list">
@@ -54,36 +57,22 @@ const ProductList = (props) => {
                 {!NameOfList ? <p className="woranging">No Prand Selected</p>
                     :
                     <div className="product-list-view__prod" style={{ display: `${styleOfList === "react" ? "block" : "flex"}` }}>
-                        {/* {
-                            console.log(props.prod.shopProduct[NameOfList])
-                        } */}
-                        <Snigle catgName="realme"
-                            id="1"
-                            img="http://placehold.it/250"
-                            prodName="3 pro"
-                            price="3000"
-                            isAvailble="true"
-                            showControls={showControls}
-                            shap={styleOfList}
-                        />
-                        <Snigle catgName="realme"
-                            id="1"
-                            img="http://placehold.it/250"
-                            prodName="3 pro"
-                            price="3000"
-                            isAvailble="true"
-                            showControls={showControls}
-                            shap={styleOfList}
-                        />
-                        <Snigle catgName="realme"
-                            id="1"
-                            img="http://placehold.it/250"
-                            prodName="3 pro"
-                            price="3000"
-                            isAvailble="true"
-                            showControls={showControls}
-                            shap={styleOfList}
-                        />
+                        {
+                            prod && props.prod.shopProduct[NameOfList].map(item => {
+                                return <Snigle
+                                    key={item._id}
+                                    catgName={item.prodTyp}
+                                    id={item._id}
+                                    img={item.img}
+                                    prodName={item.ProdName}
+                                    price={item.price}
+                                    isAvailble={item.isAvailble}
+                                    showControls={showControls}
+                                    shap={styleOfList}
+                                />
+                            })
+                        }
+
                     </div>
                 }
             </div>

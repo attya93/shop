@@ -1,0 +1,17 @@
+.item__Description {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    padding: 1rem;
+    max-width: 15rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+
+    &-title {
+        grid-column: 1/2;
+    }
+
+    &-values {
+        grid-column: 2/3;
+    }
+}

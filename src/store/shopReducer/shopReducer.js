@@ -4,7 +4,8 @@ const initalState = {
     shopProduct: data.product.categoris,
     categoryName: [],
     isNewList: [],
-    singleProd: null
+    singleProd: null,
+    specifcation: null
 }
 
 const getIsNew = (state) => {
@@ -30,17 +31,20 @@ const getListNamelength = (state) => {
 
 const getSingleProduct = (state, action) => {
     const prod = [];
+    const spcif = [];
     Object.keys(state.shopProduct).map((item) => {
         if (item === action.payload.catName) {
             const ob = state.shopProduct[item];
             ob.forEach(el => {
                 if (el._id === action.payload.id) {
                     prod.push(el);
+                    spcif.push(el.Specifications)
                 }
             })
+
         }
     })
-    return prod;
+    return { prod: prod, spcif: spcif };
 }
 
 
