@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+
+import Button from '../Button/Button';
 import './sngile.scss';
 const snigle = (props) => {
     const { showControls, shap } = props
@@ -22,7 +24,7 @@ const snigle = (props) => {
                 </Link>
                 {showControls ? <div className={`${shap ? "reactx" : "cdProd"}__controls`}>
                     <button className="btn__small">add</button>
-                    <button className="btn__small">edit</button>
+                    <Button to={`/admin/${props.catgName}/${props.id}/edit`} className="btn__small">edit</Button>
                     <button className="btn__small">delete</button>
                 </div>
                     : null

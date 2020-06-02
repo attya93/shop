@@ -8,16 +8,16 @@ import ProductViewItem from './ProductViewItem/ProductViewItem';
 
 const ProductView = (props) => {
     const { id, cat } = useParams();
-    const { findProduct } = props;
+    const { findProduct, cleanData } = props;
     let single = props.prod.singleProd;
 
-
     useEffect(() => {
+        cleanData();
         setTimeout(() => {
             findProduct(cat, id)
         }, 2000)
 
-    }, [findProduct, cat, id])
+    }, [cleanData, findProduct, cat, id])
 
     let view;
     if (single === null || single === 0) {
@@ -70,6 +70,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        cleanData: () => dispatch({ type: actionType.CleanData }),
         findProduct: (cat, id) => dispatch({ type: actionType.ShowSingleProd, payload: { catName: cat, id: id } })
     }
 }

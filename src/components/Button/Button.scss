@@ -1,0 +1,19 @@
+.btn {
+    &:disabled {
+        background: lightsteelblue;
+        color: grey;
+        cursor: not-allowed;
+
+        &:hover {
+            transform: translateY(0);
+            box-shadow: 0 2rem 4rem rgba(#000, 0.2);
+        }
+
+        &:active,
+        &:checked {
+            outline: none;
+            transform: translateY(0);
+            box-shadow: 0 2rem 4rem rgba(#000, 0.2);
+        }
+    }
+}

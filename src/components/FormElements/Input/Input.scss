@@ -1,0 +1,72 @@
+.form-controls {
+    margin: 2rem 0;
+
+    & label,
+    & input,
+    & textarea,
+    & select {
+        display: block;
+    }
+
+    & label {
+        font-weight: bold;
+        margin-bottom: 0.75rem;
+    }
+
+    & input,
+    & textarea,
+    & select {
+        width: 100%;
+        border: 2px solid #ccc;
+        background-color: #f8f8f8;
+        padding: 0.25rem 0.45rem;
+
+        &:focus {
+            outline: none;
+            background: #ebebeb;
+            border-color: #510077;
+        }
+    }
+
+    &-error {
+
+        & label,
+        & input,
+        & textarea,
+        & select {
+            display: block;
+        }
+
+        & label,
+        & p {
+            color: red;
+        }
+
+        & input,
+        & textarea,
+        & select {
+            border-color: red;
+            background: #ffd1d1;
+        }
+
+        & label {
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+        }
+
+        & input,
+        & textarea,
+        & select {
+            width: 100%;
+            border: 2px solid #ccc;
+            background-color: #f8f8f8;
+            padding: 0.25rem 0.45rem;
+
+            &:focus {
+                outline: none;
+                background: #ebebeb;
+                border-color: #510077;
+            }
+        }
+    }
+}

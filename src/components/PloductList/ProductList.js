@@ -28,7 +28,6 @@ const ProductList = (props) => {
         setStyleOfList(shap)
     }
 
-
     return (
         <>
             <div className="category__list">
@@ -61,7 +60,7 @@ const ProductList = (props) => {
                             prod && props.prod.shopProduct[NameOfList].map(item => {
                                 return <Snigle
                                     key={item._id}
-                                    catgName={item.prodTyp}
+                                    catgName={NameOfList}
                                     id={item._id}
                                     img={item.img}
                                     prodName={item.ProdName}

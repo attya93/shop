@@ -9,13 +9,16 @@ const NavLinks = (props) => {
                 <NavLink to="/" exact>Shop</NavLink>
             </li>
             <li>
-                <NavLink to={`/product`}>Categire</NavLink>
+                <NavLink to={`/product`} exact>Categire</NavLink>
+            </li>
+            <li>
+                <NavLink to="/admin/New-product" >New Product</NavLink>
             </li>
             <li>
                 <NavLink to="/auth">Auth</NavLink>
             </li>
             <li>
-                <NavLink to="/user/cart">Cart</NavLink>
+                <NavLink to="/cart">Cart</NavLink>
             </li>
         </ul>
     )

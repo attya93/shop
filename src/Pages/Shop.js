@@ -20,7 +20,6 @@ const Shop = (props) => {
 
     }, [onNewList, onNameAndLenth])
 
-    console.log(props)
 
     let view;
     if (props.prod.isNewList.length === 0 || props.prod.categoryName.length === 0) {

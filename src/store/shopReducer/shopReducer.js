@@ -66,6 +66,12 @@ const Reducer = (state = initalState, action) => {
                 singleProd: getSingleProduct(state, action)
 
             }
+        case actionType.CleanData:
+            return {
+                ...state,
+                singleProd: null,
+                specifcation: null
+            }
         default:
             return state;
     }

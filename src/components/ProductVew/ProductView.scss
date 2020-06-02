@@ -23,9 +23,11 @@
         max-height: 100%;
         padding: 2rem;
         height: 30rem;
+        width: 100%;
 
         & img {
             height: 100%;
+            width: 100%;
             border-radius: 2rem;
 
             &:hover {

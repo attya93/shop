@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import SliderControls from './SliderControls';
 import SliderCard from './SliderCard/SliderCard';
@@ -7,6 +7,17 @@ const SliderImage = (props) => {
     const [offsetX, setOffsetX] = useState(0);
     const product = props.product;
     const newProd = product.filter(prod => prod.isNew === true);
+
+
+    const id = setInterval(() => {
+        slideToLeft()
+    }, 7000);
+    useEffect(() => {
+        return () => {
+            clearInterval(id)
+        }
+    }, [id])
+
 
 
 
