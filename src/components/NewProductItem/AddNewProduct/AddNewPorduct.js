@@ -17,58 +17,58 @@ const AddNewPorduct = (props) => {
             value: "",
             isValid: false
         },
-        // ProductType: {
-        //     value: "",
-        //     isValid: false
-        // },
-        // ProductName: {
-        //     value: "",
-        //     isValid: false
-        // },
-        // price: {
-        //     value: "",
-        //     isValid: false
-        // },
-        // Descreption: {
-        //     value: "",
-        //     isValid: false
-        // },
-        // IsNew: {
-        //     value: "",
-        //     isValid: false
-        // },
-        // IsAvailable: {
-        //     value: "",
-        //     isValid: false
-        // },
-        // qtBoxs: {
-        //     value: 0,
-        //     isValid: false
-        // },
-        // InBox: {
-        //     value: 0,
-        //     isValid: false
-        // },
-        // color: {
-        //     value: "",
-        //     isValid: true
-        // },
-        // Ram: {
-        //     value: "",
-        //     isValid: true
-        // },
-        // Processor: {
-        //     value: "",
-        //     isValid: true
-        // },
-        // Storge: {
-        //     value: "",
-        //     isValid: true
-        // },
-        // screen: {
-        //     value: "",
-        //     isValid: true
-        // }
+        ProductType: {
+            value: "",
+            isValid: false
+        },
+        ProductName: {
+            value: "",
+            isValid: false
+        },
+        price: {
+            value: "",
+            isValid: false
+        },
+        Descreption: {
+            value: "",
+            isValid: false
+        },
+        IsNew: {
+            value: "",
+            isValid: false
+        },
+        IsAvailable: {
+            value: "",
+            isValid: false
+        },
+        qtBoxs: {
+            value: 0,
+            isValid: false
+        },
+        InBox: {
+            value: 0,
+            isValid: false
+        },
+        color: {
+            value: "",
+            isValid: true
+        },
+        Ram: {
+            value: "",
+            isValid: true
+        },
+        Processor: {
+            value: "",
+            isValid: true
+        },
+        Storge: {
+            value: "",
+            isValid: true
+        },
+        screen: {
+            value: "",
+            isValid: true
+        }
     },
         false);
 
@@ -158,6 +158,7 @@ const AddNewPorduct = (props) => {
                 type="number"
                 placeholder="0"
                 validators={[Vaildator_Require()]}
+                Min={1}
                 onInput={InputHandler}
                 errorText="Please Enter This Filed" />
 
@@ -166,6 +167,7 @@ const AddNewPorduct = (props) => {
                 element="input"
                 label="Quantity In Box"
                 type="number"
+                Min={1}
                 placeholder="0"
                 validators={[Vaildator_Require()]}
                 onInput={InputHandler}

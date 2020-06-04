@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import * as actionType from '../../../store/shopAction/shopAction';
+import * as actionType from '../../../store/shopAction/shopActionTypes';
 
 import Loading from '../../Loading/Loading';
 import Subupdata from './subupadate';
@@ -40,7 +40,7 @@ const UpdateProduct = (props) => {
 }
 const mapStateToProps = state => {
     return {
-        prod: state
+        prod: state.prod
     }
 }
 

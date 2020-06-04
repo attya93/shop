@@ -6,6 +6,7 @@ const store = {
             realme: [
                 {
                     _id: "1",
+                    cat: "realme",
                     index: 0,
                     ProdName: "3 Pro",
                     prodTyp: "Realme",
@@ -22,6 +23,7 @@ const store = {
                 {
                     _id: "2",
                     index: 1,
+                    cat: "realme",
                     ProdName: "5 Pro",
                     prodTyp: "Realme",
                     isNew: false,
@@ -37,6 +39,7 @@ const store = {
                 {
                     _id: "3",
                     index: 2,
+                    cat: "realme",
                     ProdName: "6 Pro",
                     prodTyp: "Realme",
                     isNew: true,
@@ -52,6 +55,7 @@ const store = {
                 {
                     _id: "4",
                     index: 3,
+                    cat: "realme",
                     ProdName: "6 ",
                     prodTyp: "Realme",
                     isNew: false,
@@ -68,6 +72,7 @@ const store = {
                 {
                     _id: "5",
                     index: 4,
+                    cat: "realme",
                     ProdName: "6 ",
                     prodTyp: "Realme",
                     isNew: false,
@@ -83,6 +88,7 @@ const store = {
                 {
                     _id: "6",
                     index: 5,
+                    cat: "realme",
                     ProdName: "6 ",
                     prodTyp: "Realme",
                     isNew: false,
@@ -100,6 +106,7 @@ const store = {
                 {
                     _id: "1",
                     index: 0,
+                    cat: "Apple",
                     ProdName: "6s",
                     prodTyp: "Iphone",
                     isNew: false,
@@ -115,6 +122,7 @@ const store = {
                 {
                     _id: "2",
                     index: 1,
+                    cat: "Apple",
                     ProdName: "7 ",
                     prodTyp: "IPhone",
                     isNew: true,

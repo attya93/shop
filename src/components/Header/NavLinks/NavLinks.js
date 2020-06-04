@@ -18,7 +18,7 @@ const NavLinks = (props) => {
                 <NavLink to="/auth">Auth</NavLink>
             </li>
             <li>
-                <NavLink to="/cart">Cart</NavLink>
+                <NavLink to="/order/cart" exact>Cart</NavLink>
             </li>
         </ul>
     )

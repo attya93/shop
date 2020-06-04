@@ -4,6 +4,7 @@
     &:link,
     &:visited {
         text-transform: capitalize;
+        text-align: center;
         text-decoration: none;
         font-weight: bolder;
         padding: 1.5rem 4rem;
@@ -52,6 +53,7 @@
             cursor: pointer;
             background: lightsteelblue;
             border: 1px solid royalblue;
+            text-align: center;
 
             &:hover {
                 transform: translateY(-0.3rem);

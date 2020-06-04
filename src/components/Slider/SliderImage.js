@@ -41,6 +41,7 @@ const SliderImage = (props) => {
                                 style={{ transform: `translateX(${offsetX}%)` }}>
                                 <SliderCard
                                     name={`${item.prodTyp} ${item.ProdName}`}
+                                    cat={item.cat}
                                     desc={item.desc}
                                     price={item.price}
                                     img={item.img}

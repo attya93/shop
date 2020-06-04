@@ -1,5 +1,6 @@
-import * as actionType from '../shopAction/shopAction';
+import * as actionType from '../shopAction/shopActionTypes';
 import data from '../../data';
+
 const initalState = {
     shopProduct: data.product.categoris,
     categoryName: [],

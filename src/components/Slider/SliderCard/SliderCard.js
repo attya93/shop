@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+import Button from '../../Button/Button';
 import './SliderCard.scss';
 const SliderCard = (props) => {
     return (
@@ -14,7 +14,7 @@ const SliderCard = (props) => {
                 <span className="card__info-details">color: {props.color.join(" ")}</span>
                 <div className="card__info-order">
                     <h4 className="price">{`${props.price} EGP`}</h4>
-                    <button className="btn btn-order">Order Now</button>
+                    <Button className="btn " to={`/${props.cat}/${props.id}`}>Order Now</Button>
                 </div>
             </div>
         </article>

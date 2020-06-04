@@ -1,0 +1,39 @@
+.orderCard {
+    padding: 1rem;
+    background: rosybrown;
+    color: seashell;
+    border-radius: 2rem;
+    max-width: 25rem;
+
+    &__Title {
+        margin: 0.5rem;
+        font-size: 2.5rem;
+        color: black;
+
+        & span {
+            color: red;
+        }
+    }
+
+    &__status {
+        margin: 0.5rem;
+        font-size: 2rem;
+        color: black;
+
+        & span {
+            font-weight: bolder;
+        }
+    }
+
+    &__Controls {
+        text-align: center;
+
+        & a,
+        & button {
+            display: flex;
+            justify-content: center;
+            color: black;
+            width: 100%;
+        }
+    }
+}

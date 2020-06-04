@@ -27,7 +27,7 @@ const Input = (props) => {
     const [inState, dispatch] = useReducer(inputReducer, {
         value: props.valuez || "",
         isValid: props.valid || false,
-        isTouched: false
+        isTouched: props.touchz || false
     })
     const { id, onInput } = props;
     const { value, isValid } = inState;
@@ -55,6 +55,9 @@ const Input = (props) => {
                 onChange={changeHandler}
                 onBlur={touchHandler}
                 autoComplete="true"
+                min={props.Min}
+                max={props.max}
+                step={props.step}
                 value={inState.value}
             />
             break;
@@ -91,12 +94,11 @@ const Input = (props) => {
     }
 
 
-
     return (
-        <div className={`form-controls${!inState.isVaild && inState.isTouched ? "-error" : ""}`}>
+        <div className={`form-controls${!inState.isVaild && (props.type === "number" ? false : inState.isTouched) ? "-error" : ""}`}>
             <label htmlFor={props.id}>{props.label}</label>
             {elements}
-            {!inState.isVaild && inState.isTouched && <p>{props.errorText}</p>}
+            {!inState.isVaild && (props.type === "number" ? false : inState.isTouched) && <p>{props.errorText}</p>}
         </div>
     )
 }

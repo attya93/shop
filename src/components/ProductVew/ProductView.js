@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-import * as actionType from '../../store/shopAction/shopAction';
+import * as actionType from '../../store/shopAction/shopActionTypes';
 import { connect } from 'react-redux';
 
 import Loading from '../Loading/Loading';
 import ProductViewItem from './ProductViewItem/ProductViewItem';
+import OrderCard from '../OrderView/Order/OrderCard';
 
 const ProductView = (props) => {
     const { id, cat } = useParams();
@@ -51,7 +52,7 @@ const ProductView = (props) => {
                 </div>
                 <div className="prod-shop__order">
                     <h4>Order:</h4>
-                    <button className="btn">Order Now</button>
+                    <OrderCard product={single.prod[0]} />
                 </div>
             </section>
         )
@@ -64,7 +65,7 @@ const ProductView = (props) => {
 
 const mapStateToProps = state => {
     return {
-        prod: state
+        prod: state.prod
     }
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux';
-import * as actionType from '../../store/shopAction/shopAction';
+import * as actionType from '../../store/shopAction/shopActionTypes';
 
 import Product from './Product/Product';
 import Snigle from '../snigle/snigle';
@@ -82,7 +82,7 @@ const ProductList = (props) => {
 
 const mapStateToProps = state => {
     return {
-        prod: state
+        prod: state.prod
     }
 }
 const mapDispatchToProps = dispatch => {
