@@ -5,7 +5,6 @@ import Button from '../../Button/Button';
 import './OrderView.scss'
 const OrderVew = (props) => {
     const { Name, Price, Qty } = props
-    console.log(Name, Price, Qty);
     return (
         <div className="orderView">
             <div className="orderView__img">

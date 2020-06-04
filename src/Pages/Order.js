@@ -3,14 +3,13 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Order_ADD, Order_SUB, Order_Result, Order_RM } from '../store/orderAction/orderAction';
 
-
+import Button from "../components/Button/Button";
 import OrderView from '../components/OrderView/View/OrderVew';
 
 
 const Order = (props) => {
-    const { order, onResult, onAddQty, onSubQty } = props;
+    const { order, onResult, onAddQty, onSubQty, onRemove } = props;
     useEffect(() => {
-
         const id = setInterval(() => {
             onResult()
         }, 2000)
@@ -36,8 +35,10 @@ const Order = (props) => {
                             Qty={odr.qty}
                             add={() => onAddQty(odr._id)}
                             sub={() => onSubQty(odr._id)}
-
                         />
+                        <div className="cart__delete">
+                            <Button className='btn__small' onClick={() => onRemove(odr._id)}>Del</Button>
+                        </div>
                     </li>
                 })}
             </ul>

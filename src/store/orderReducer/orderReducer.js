@@ -17,12 +17,7 @@ const orderPrice = (state, action) => {
     return (total);
 }
 
-const removeOrder = (state, action) => {
-    const updateOrder = state.order.fliter(order => {
-        return order.id !== action.id;
-    })
-    return updateOrder;
-}
+
 
 
 const orderReducer = (state = intialState, action) => {
@@ -52,7 +47,6 @@ const orderReducer = (state = intialState, action) => {
                         } else {
                             ob.qty = 1
                         }
-
                     }
                     return true
                 })]
@@ -60,7 +54,7 @@ const orderReducer = (state = intialState, action) => {
         case actionType.Order_Type_RM:
             return {
                 ...state,
-                order: removeOrder(state, action)
+                order: [...state.order.filter(ob => ob._id !== action.id)]
             }
         case actionType.Order_Type_Result:
             return {
